@@ -2,11 +2,32 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from '../HomePage/HomePage.module.css';
 
+// images
+import BlueLogo from '../../images/surelogo_blue.png';
+import Bitmap from '../../images/Bitmap.png';
+import ChubbLogo from '../../images/chubb.png';
+import NWLogo from '../../images/NationwideLrgFormat.png';
+import QBELogo from '../../images/QBE_logo.png';
+import AssurantLogo from '../../images/Assurant_logo.svg.png';
+import ApiIcon from '../../images/api.png';
+import iFrameIcon from '../../images/iFrame.png';
+import WhiteLabelIcon from '../../images/whitelabel.png';
+import PetIcon from '../../images/Pet Icon.png';
+import TravelIcon from '../../images/travel icon.png';
+import PropertyIcon from '../../images/Property Icon.png';
+import CatastrophicEventIcon from '../../images/Event Icon.png';
+import HomeIcon from '../../images/Home Icon.png';
+import TwitterIcon from '../../images/Twitter.png';
+import FacebookIcon from '../../images/Facebook.png';
+import InstagramIcon from '../../images/Instagram.png';
+
+
 const HomePage = () => {
   return (
     <div className={styles.HomePage}>
         <div className={styles.navbar}>
             this is the nav bar
+            <img src={BlueLogo} alt="sure logo"/>
         </div>
         <section className={styles.hero}>
             <h1>Sure + You.</h1>
@@ -16,18 +37,19 @@ const HomePage = () => {
             <button>
                 <Link to='/hacker-news'>Get Started</Link>
             </button>
+            <img src={Bitmap} alt=""/>
         </section>
         <section className={styles.partners}>
-            <img src="" alt="chubb logo"/>
-            <img src="" alt="nationwide logo"/>
-            <img src="" alt="qbe logo"/>
-            <img src="" alt="assurant logo"/>
+            <img src={ChubbLogo} alt="chubb logo"/>
+            <img src={NWLogo} alt="nationwide logo"/>
+            <img src={QBELogo} alt="qbe logo"/>
+            <img src={AssurantLogo} alt="assurant logo"/>
         </section>
         <section className={styles.solutions}>
             <p>Choose the solution that's right for your business.</p>
             <div>
                 <div>
-                    <img src="" alt="icon"/>
+                    <img src={ApiIcon} alt="icon"/>
                     <h3>API</h3>
                 </div>
                 <p>
@@ -36,7 +58,7 @@ const HomePage = () => {
             </div>
             <div>
                 <div>
-                    <img src="" alt="icon"/>
+                    <img src={iFrameIcon} alt="icon"/>
                     <h3>iFrame</h3>
                 </div>
                 <p>
@@ -45,7 +67,7 @@ const HomePage = () => {
             </div>
             <div>
                 <div>
-                    <img src="" alt="icon"/>
+                    <img src={WhiteLabelIcon} alt="icon"/>
                     <h3>White Label</h3>
                 </div>
                 <p>
@@ -58,35 +80,35 @@ const HomePage = () => {
                     Our partners come in all shapes and sizes, just like our policies.
                 </p>
                 <div className={styles.optionWrapper}>
-                    <img src="" alt="pet icon"/>
+                    <img src={PetIcon} alt="pet icon"/>
                     <h4>Pet Coverage</h4>
                     <p>
                         Includes preventatice, accident, and comprehensive
                     </p>
                 </div>
                 <div className={styles.optionWrapper}>
-                    <img src="" alt="suitcase icon"/>
+                    <img src={TravelIcon} alt="suitcase icon"/>
                     <h4>Travel Coverage</h4>
                     <p>
                         Includes baggage, car, rental, leisure, and flight policies
                     </p>
                 </div>
                 <div className={styles.optionWrapper}>
-                    <img src="" alt="picture frame icon"/>
+                    <img src={PropertyIcon} alt="picture frame icon"/>
                     <h4>Property Coverage</h4>
                     <p>
                         Includes jewelry, collectibles, and smartphones policies
                     </p>
                 </div>
                 <div className={styles.optionWrapper}>
-                    <img src="" alt="diamond ring icon"/>
+                    <img src={CatastrophicEventIcon} alt="diamond ring icon"/>
                     <h4>Catastrophic Event Coverage</h4>
                     <p>
                         Includes weddings, and special events policies
                     </p>
                 </div>
                 <div className={styles.optionWrapper}>
-                    <img src="" alt="house icon"/>
+                    <img src={HomeIcon} alt="house icon"/>
                     <h4>Home Coverage</h4>
                     <p>
                         Includes renters, eviction, and homeowners policies
@@ -104,7 +126,7 @@ const HomePage = () => {
             </form>
         </section>
         <footer>
-            <img src="" alt="sure logo"/>
+            <img src={BlueLogo} alt="sure logo"/>
             <p>&copy; 2016-2017 Sure Inc.<br/>All rights reserved.</p>
             <a href="#">Privacy Policy</a>
             <a href="#">Terms of Service</a>
@@ -112,9 +134,9 @@ const HomePage = () => {
             <a href="#">Help Center</a>
             <a href="#">Contact Us</a>
             <div className={styles.iconWrapper}>
-                <img src="" alt="twitter icon"/>
-                <img src="" alt="facebook icon"/>
-                <img src="" alt="instagram icon"/>
+                <img src={TwitterIcon} alt="twitter icon"/>
+                <img src={FacebookIcon} alt="facebook icon"/>
+                <img src={InstagramIcon} alt="instagram icon"/>
             </div>
         </footer>
     </div>
