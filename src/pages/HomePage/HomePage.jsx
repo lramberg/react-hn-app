@@ -6,98 +6,98 @@ import styles from '../HomePage/HomePage.module.css';
 const HomePage = () => {
   return (
     <div className={styles.HomePage}>
-        <div className={styles.navbar}>
-            this is the nav bar
-            <img src={require('../../images/surelogo_blue.png')} alt="sure logo"/>
-        </div>
+        <nav className={styles.navbar}>
+            <img src={require('../../images/surelogo_blue.png')} alt="sure logo" className={styles.navLogo} />
+            <img src={require('../../images/menu.png')} alt="menu icon" className={styles.menu} />
+        </nav>
         <section className={styles.hero}>
-            <h1>Sure + You.</h1>
-            <p>
-                Complement your core business and <em>increase customer lifetime value</em> with integrated offers from top-tier insurance carriers.
+            <h1 className={styles.h1} >Sure + You.</h1>
+            <p className={styles.heroBlurb} >
+                Complement your core business and <strong>increase customer lifetime value</strong> with integrated offers from top-tier insurance carriers.
             </p>
-            <button>
-                <Link to='/hacker-news'>Get Started</Link>
+            <button  >
+                <Link to='/hacker-news' className={styles.getStartedBtn}>Get Started</Link>
             </button>
-            <img src={require('../../images/Bitmap.png')} alt="bitmap photo"/>
+            <img src={require('../../images/Bitmap.png')} alt="bitmap photo" className={styles.computerImage} />
         </section>
         <section className={styles.partners}>
-            <img src={require('../../images/chubb.png')} alt="chubb logo"/>
-            <img src={require('../../images/NationwideLrgFormat.png')} alt="nationwide logo"/>
-            <img src={require('../../images/QBE_logo.png')} alt="qbe logo"/>
-            <img src={require('../../images/Assurant_logo.svg.png')} alt="assurant logo"/>
+            <img src={require('../../images/chubb.png')} alt="chubb logo" className={`${styles.partnerLogo} ${styles.chubb}`} />
+            <img src={require('../../images/NationwideLrgFormat.png')} alt="nationwide logo" className={`${styles.partnerLogo} ${styles.nationWide}`} />
+            <img src={require('../../images/QBE_logo.png')} alt="qbe logo" className={`${styles.partnerLogo} ${styles.QBE}`} />
+            <img src={require('../../images/Assurant_logo.svg.png')} alt="assurant logo" className={`${styles.partnerLogo} ${styles.assurant}`} />
         </section>
         <section className={styles.solutions}>
-            <p>Choose the solution that's right for your business.</p>
+            <p className={styles.solutionsHeading} >Choose the solution that's right for your business.</p>
             <div>
                 <div>
                     <img src={require('../../images/api.png')} alt="icon"/>
-                    <h3>API</h3>
+                    <h3 className={styles.h3} >API</h3>
                 </div>
-                <p>
+                <p className={styles.solutionBlurb} >
                     The Sure API is a set of RESTful endpoints that allow you to customize the look and feel for a truly native experience.
                 </p>
             </div>
             <div>
                 <div>
                     <img src={require('../../images/iFrame.png')} alt="icon"/>
-                    <h3>iFrame</h3>
+                    <h3 className={styles.h3} >iFrame</h3>
                 </div>
-                <p>
+                <p className={styles.solutionBlurb} >
                     The iFrame solution allows for easy integration - simply place a line of code to embed an insurance form anywhere on your site.
                 </p>
             </div>
             <div>
                 <div>
                     <img src={require('../../images/whitelabel.png')} alt="icon"/>
-                    <h3>White Label</h3>
+                    <h3 className={styles.h3} >White Label</h3>
                 </div>
-                <p>
+                <p className={styles.solutionBlurb} >
                     Sure will build and host a branded page, which you ca link to from a webpage or an email.
                 </p>
             </div>
         </section>
         <section className={styles.coverageOptions}>
-                <p>
+                <p className={styles.coverageOptionsHeading} >
                     Our partners come in all shapes and sizes, just like our policies.
                 </p>
-                <div className={styles.optionWrapper}>
-                    <img src={require('../../images/Pet Icon.png')} alt="pet icon"/>
-                    <h4>Pet Coverage</h4>
-                    <p>
+                <div className={styles.coverageWrapper}>
+                    <img src={require('../../images/Pet Icon.png')} alt="pet icon" className={styles.coverageIcon} />
+                    <h4 className={styles.coverageTitle} >Pet Coverage</h4>
+                    <p className={styles.coverageBlurb} >
                         Includes preventatice, accident, and comprehensive
                     </p>
                 </div>
-                <div className={styles.optionWrapper}>
-                    <img src={require('../../images/travel icon.png')} alt="suitcase icon"/>
-                    <h4>Travel Coverage</h4>
-                    <p>
+                <div className={styles.coverageWrapper}>
+                    <img src={require('../../images/travel icon.png')} alt="suitcase icon" className={styles.coverageIcon} />
+                    <h4 className={styles.coverageTitle} >Travel Coverage</h4>
+                    <p className={styles.coverageBlurb} >
                         Includes baggage, car, rental, leisure, and flight policies
                     </p>
                 </div>
-                <div className={styles.optionWrapper}>
-                    <img src={require('../../images/Property Icon.png')} alt="picture frame icon"/>
-                    <h4>Property Coverage</h4>
-                    <p>
+                <div className={styles.coverageWrapper}>
+                    <img src={require('../../images/Property Icon.png')} alt="picture frame icon" className={styles.coverageIcon} />
+                    <h4 className={styles.coverageTitle} >Property Coverage</h4>
+                    <p className={styles.coverageBlurb} >
                         Includes jewelry, collectibles, and smartphones policies
                     </p>
                 </div>
-                <div className={styles.optionWrapper}>
-                    <img src={require('../../images/Event Icon.png')} alt="diamond ring icon"/>
-                    <h4>Catastrophic Event Coverage</h4>
-                    <p>
+                <div className={styles.coverageWrapper}>
+                    <img src={require('../../images/Event Icon.png')} alt="diamond ring icon" className={styles.coverageIcon} />
+                    <h4 className={styles.coverageTitle} >Catastrophic Event Coverage</h4>
+                    <p className={styles.coverageBlurb} >
                         Includes weddings, and special events policies
                     </p>
                 </div>
-                <div className={styles.optionWrapper}>
-                    <img src={require('../../images/Home Icon.png')} alt="house icon"/>
-                    <h4>Home Coverage</h4>
-                    <p>
+                <div className={styles.coverageWrapper}>
+                    <img src={require('../../images/Home Icon.png')} alt="house icon" className={styles.coverageIcon} />
+                    <h4 className={styles.coverageTitle} >Home Coverage</h4>
+                    <p className={styles.coverageBlurb} >
                         Includes renters, eviction, and homeowners policies
                     </p>
                 </div>
         </section>
         <section className={styles.signup}>
-            <p>Contact our partnerships team today.</p>
+            <p className={styles.signupHeading}>Contact our partnerships team today.</p>
             <form>
                 <input type="text" placeholder="First Name" />
                 <input type="text" placeholder="Last Name" />
