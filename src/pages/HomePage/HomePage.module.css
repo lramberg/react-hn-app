@@ -133,22 +133,24 @@
 }
 
 .coverageOptions {
-    height: 1913px;
-    background-image: url('../../images/Blue BG.png');
+    height: 2018px;
+    background-image: url('../../images/coverageBG.png');
     background-repeat: no-repeat;
+    background-position: 75% -112px;
+    background-size: cover;
     text-align: center;
     margin-top: -20px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .coverageOptionsHeading {
-    font-family: 'Montserrat', sans-serif;
     font-weight: 300;
     font-size: 32px;
     line-height: 43px;
     letter-spacing: 1px;
     color: #FFFFFF;
     margin-top: 10px;
-    padding: 188px 20px 0px 20px;
+    padding: 177px 20px 0px 20px;
 }
 
 .coverageWrapper {
@@ -161,13 +163,9 @@
     margin-bottom: 30px;
 }
 
-.coverageWrapper:last-child {
-    margin-bottom: 50px;
-}
-
 .coverageIcon {
     margin-top: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .coverageTitle {
@@ -184,34 +182,35 @@
     font-size: 16px;
     line-height: 21px;
     color: #6B7C93;
-    padding: 10px 10px 31px;
-    margin-top: 10px;
+    padding: 10px 10px 36px;
+    margin: 0;
 }
 
 .signup {
-    background-image: url('../../images/signup bg.png');
+    background-image: url('../../images/signupBG.png');
     background-repeat: no-repeat;
-    background-color: rgba(107, 124, 147, .84);
-    background-blend-mode: multiply;
-    mix-blend-mode: normal;
     font-family: 'Lato', sans-serif;
-    margin-top: -50px;
+    margin-top: -113px;
 }
 
 .signupHeading {
-    margin: 52px 0 17px 0;
+    margin: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 32px;
     line-height: 43px;
-    padding: 53px 20px 0;
+    padding: 50px 20px 20px;
     text-align: center;
     color: #FFFFFF;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .textInput {
-    width: 268px;
-    height: 49px;
-    margin-left: 26px;
+    box-sizing: border-box;
     margin-bottom: 10px;
     border: 1px solid #DADFE9;
     border-radius: 5px;
@@ -219,7 +218,7 @@
     font-size: 16px;
     line-height: 19px;
     color: #9BA9BB;
-    padding-left: 16px;
+    padding: 15px 80px 14px 16px;
 }
 
 .submitBtn {
@@ -228,7 +227,7 @@
     background: #FF7043;
     border-radius: 5px;
     border: none;
-    margin: 21px 26px 49px;
+    margin: 11px 26px 47px;
     font-family: 'Lato', sans-serif;
     font-size: 20px;
     line-height: 24px;
@@ -241,14 +240,14 @@
 }
 
 .footerLogo {
-    margin-top: 40px;
+    margin: 40px 0 28px 0;
 }
 
 .copywright {
     font-size: 14px;
     line-height: 17px;
     color: #6B7C93;
-    margin-bottom: 20px;
+    margin: 0 0 20px;
 }
 
 .footerLink {

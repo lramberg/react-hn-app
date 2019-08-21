@@ -77,7 +77,7 @@ const HomePage = () => {
                 </div>
                 <div className={styles.coverageWrapper}>
                     <img src={require('../../images/Event Icon.png')} alt="diamond ring icon" className={styles.coverageIcon} />
-                    <h4 className={styles.coverageTitle} >Catastrophic Event Coverage</h4>
+                    <h4 className={styles.coverageTitle} >Catastrophic Event <br/>Coverage</h4>
                     <p className={styles.coverageBlurb} >
                         Includes weddings, and special events policies
                     </p>
@@ -92,7 +92,7 @@ const HomePage = () => {
         </section>
         <section className={styles.signup}>
             <p className={styles.signupHeading}>Contact our partnerships team today.</p>
-            <form>
+            <form className={styles.form} >
                 <input type="text" placeholder="First Name" className={styles.textInput} />
                 <input type="text" placeholder="Last Name" className={styles.textInput} />
                 <input type="text" placeholder="Company" className={styles.textInput} />
