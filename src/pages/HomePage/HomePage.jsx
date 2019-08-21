@@ -99,26 +99,24 @@ const HomePage = () => {
         <section className={styles.signup}>
             <p className={styles.signupHeading}>Contact our partnerships team today.</p>
             <form>
-                <input type="text" placeholder="First Name" />
-                <input type="text" placeholder="Last Name" />
-                <input type="text" placeholder="Company" />
-                <input type="text" placeholder="Work Email" />
-                <button>Submit</button>
+                <input type="text" placeholder="First Name" className={styles.textInput} />
+                <input type="text" placeholder="Last Name" className={styles.textInput} />
+                <input type="text" placeholder="Company" className={styles.textInput} />
+                <input type="text" placeholder="Work Email" className={styles.textInput} />
+                <button className={styles.submitBtn}>Submit</button>
             </form>
         </section>
-        <footer>
-            <img src={require('../../images/surelogo_blue.png')} alt="sure logo"/>
-            <p>&copy; 2016-2017 Sure Inc.<br/>All rights reserved.</p>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Licenses</a>
-            <a href="#">Help Center</a>
-            <a href="#">Contact Us</a>
-            <div className={styles.iconWrapper}>
-                <img src={require('../../images/Twitter.png')} alt="twitter icon"/>
-                <img src={require('../../images/Facebook.png')} alt="facebook icon"/>
-                <img src={require('../../images/Instagram.png')} alt="instagram icon"/>
-            </div>
+        <footer className={styles.footer} >
+            <img src={require('../../images/surelogo_blue.png')} alt="sure logo" className={styles.footerLogo} />
+            <p className={styles.copywright} >&copy; 2016-2017 Sure Inc.<br/>All rights reserved.</p>
+            <a href="#" className={styles.footerLink} >Privacy Policy</a>
+            <a href="#" className={styles.footerLink} >Terms of Service</a>
+            <a href="#" className={styles.footerLink} >Licenses</a>
+            <a href="#" className={styles.footerLink} >Help Center</a>
+            <a href="#" className={styles.footerLink} >Contact Us</a>
+            <img src={require('../../images/Twitter.png')} alt="twitter icon" className={styles.socialMediaIcon} />
+            <img src={require('../../images/Facebook.png')} alt="facebook icon" className={styles.socialMediaIcon} />
+            <img src={require('../../images/Instagram.png')} alt="instagram icon" className={styles.socialMediaIcon} />
         </footer>
     </div>
   );
