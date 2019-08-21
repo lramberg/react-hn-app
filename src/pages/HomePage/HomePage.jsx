@@ -18,7 +18,7 @@ const HomePage = () => {
             <button  >
                 <Link to='/hacker-news' className={styles.getStartedBtn}>Get Started</Link>
             </button>
-            <img src={require('../../images/Bitmap.png')} alt="bitmap photo" className={styles.computerImage} />
+            <img src={require('../../images/computer-image.png')} alt="bitmap photo" className={styles.computerImage} />
         </section>
         <section className={styles.partners}>
             <img src={require('../../images/chubb.png')} alt="chubb logo" className={`${styles.partnerLogo} ${styles.chubb}`} />
