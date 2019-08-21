@@ -1,47 +1,38 @@
 import React, { Component } from 'react';
-import axios from 'axios';
 
-// import { getTopStories } from '../../services/api';
+import { getTopStories } from '../../services/api';
 
 class PostsDisplay extends Component {
     state = {
-        stories: []
+        stories: [],
+        readyToRender: false
     }
 
     componentDidMount() {
         var self = this;
-        // var json = getTopStories();
-        // self.setState({ stories: json })
-        var stories = [];
-        axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
-        .then(res => {
-            var results = res.data.slice(0, 100);
-            console.log("res", results)
-            results.forEach(item => {
-                axios.get(
-                    "https://hacker-news.firebaseio.com/v0/item/" + item + ".json?print=pretty"
+        var json = getTopStories();
+        self.setState({ stories: json, readyToRender: true })
+    }
+
+    displayStory() {
+        if (this.state.readyToRender) {
+            this.state.stories.map((story, idx) => {
+                console.log('story', story);
+                return (
+                    <li key={idx}>
+                        {story.title}
+                    </li>
                 )
-                .then(res => {
-                    stories.push(res.data);
-                })
             })
-        })
-        self.setState({ stories: stories })
+        }
     }
 
     render() {
         console.log('state', this.state.stories)
-        var story = this.state.stories.map((story, idx) => {
-            return (
-                <li key={idx}>
-                    {story.title}
-                </li>
-            )
-        })
         return (
             <div>
                 <ul>
-                    { story }
+                    { this.displayStory() }
                 </ul>
             </div>
         );
