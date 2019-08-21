@@ -4,6 +4,7 @@ import './App.css';
 
 // components
 import HomePage from './pages/HomePage/HomePage';
+import HackerNews from './pages/HackerNews/HackerNews';
 
 function App() {
     return (
@@ -11,6 +12,9 @@ function App() {
             <Switch>
                 <Route  exact path='/' render={() => 
                     <HomePage />
+                } />
+                <Route exact path='/hacker-news' render={() => 
+                    <HackerNews />
                 } />
             </Switch>
         </div>
