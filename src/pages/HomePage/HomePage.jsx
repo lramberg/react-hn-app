@@ -29,30 +29,24 @@ const HomePage = () => {
         <section className={styles.solutions}>
             <p className={styles.solutionsHeading} >Choose the solution that's right for your business.</p>
             <div>
-                <div>
-                    <img src={require('../../images/api.png')} alt="icon"/>
-                    <h3 className={styles.h3} >API</h3>
-                </div>
+                <img src={require('../../images/api.png')} alt="icon"/>
+                <h3 className={styles.solutionTitle} >API</h3>
                 <p className={styles.solutionBlurb} >
-                    The Sure API is a set of RESTful endpoints that allow you to customize the look and feel for a truly native experience.
+                    The Sure API is a set of RESTful <br/> endpoints that allow you to <br/>customize the look and feel for <br/>a truly native experience.
                 </p>
             </div>
             <div>
-                <div>
-                    <img src={require('../../images/iFrame.png')} alt="icon"/>
-                    <h3 className={styles.h3} >iFrame</h3>
-                </div>
-                <p className={styles.solutionBlurb} >
-                    The iFrame solution allows for easy integration - simply place a line of code to embed an insurance form anywhere on your site.
+                <img src={require('../../images/iFrame.png')} alt="icon"/>
+                <h3 className={styles.solutionTitle} >iFrame</h3>
+                <p className={`${styles.solutionBlurb} ${styles.iFrame}`} >
+                    The iFrame solution allows for <br/>easy integration - simply place a <br/>line of code to embed an insurance <br/>form anywhere on your site.
                 </p>
             </div>
             <div>
-                <div>
-                    <img src={require('../../images/whitelabel.png')} alt="icon"/>
-                    <h3 className={styles.h3} >White Label</h3>
-                </div>
+                <img src={require('../../images/whitelabel.png')} alt="icon"/>
+                <h3 className={styles.solutionTitle} >White Label</h3>
                 <p className={styles.solutionBlurb} >
-                    Sure will build and host a branded page, which you ca link to from a webpage or an email.
+                    Sure will build and host a <br/>branded page, which you ca link <br/>to from a webpage or an email.
                 </p>
             </div>
         </section>
