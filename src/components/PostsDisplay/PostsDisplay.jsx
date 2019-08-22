@@ -4,35 +4,53 @@ import { getTopStories } from '../../services/api';
 
 class PostsDisplay extends Component {
     state = {
+        isLoaded: false,
         stories: [],
-        readyToRender: false
+        bookmarks: []
     }
 
-    componentDidMount() {
-        var self = this;
-        var json = getTopStories();
-        self.setState({ stories: json, readyToRender: true })
-    }
+    // componentDidMount() {
+    //     var self = this;
+    //     var json = getTopStories()
+    //     self.setState({ stories: json })
+    // }
 
-    displayStory() {
-        if (this.state.readyToRender) {
-            this.state.stories.map((story, idx) => {
-                console.log('story', story);
-                return (
-                    <li key={idx}>
-                        {story.title}
-                    </li>
-                )
-            })
-        }
-    }
+    // displayStory() {
+    //     if (this.state.readyToRender === true ) {
+    //         this.state.stories.map((story, idx) => {
+    //             return (
+    //                 <li key={idx}>
+    //                     {story[idx]}
+    //                 </li>
+    //             )
+    //         })
+    //     } else {
+    //         return (
+    //             <li>No Stories</li>
+    //         )
+    //     }
+    // }
+
+    // handleBookmark = (e) => {
+    //     e.preventDefault();
+        
+    // }
 
     render() {
-        console.log('state', this.state.stories)
+        // var story = this.state.stories.map((story, idx) => {
+        //     return (
+        //         <li key={idx}>
+        //             <a href={story.url}>{story.title}</a>
+        //             <p>Score: {story.score}</p>
+        //             <p>By: {story.by} </p>
+        //             <button>Bookmark</button>
+        //         </li>
+        //     );
+        // })
         return (
             <div>
                 <ul>
-                    { this.displayStory() }
+                    display
                 </ul>
             </div>
         );

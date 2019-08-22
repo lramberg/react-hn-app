@@ -5,7 +5,11 @@
     box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.1);
 }
 
-.navLogo {
+.desktopNav {
+    display: none;
+}
+
+.navLogoMobile {
     height: 20px;
     width: 76px;
     margin: 15px 10px;
@@ -29,7 +33,7 @@
     align-items: center;
 }
 
-.h1 {
+.heroTitle {
     font-weight: 300;
     font-size: 44px;
     line-height: 54px;
@@ -273,5 +277,152 @@
 }
 
 @media only screen and (min-width: 767px) {
+    .desktopNav {
+        display: block;
+    }
+
+    .mobileNav {
+        display: none;
+    }
+
+    .desktopBackgroundWrapper {
+        background-image: url('../../images/heroBG.png');
+        background-repeat: no-repeat;
+        background-position: -75px -132px;
+        background-size: cover;
+    }
+
+    .navbar {
+        box-shadow: none;
+        height: auto;
+        justify-content: space-between;
+    }
+
+    .navItem {
+        font-family: 'Lato', sans-serif;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        text-decoration: none;
+        margin-top: 25px;
+        margin-right: 40px;
+        padding: 0;
+    }
     
+    .navLogoDesktop {
+        height: 39px;
+        width: 150px;
+        margin: 17px 40px 0 153px;
+    }
+    
+    .dropDown {
+        position: relative;
+        margin-right: 56px;
+    }
+
+    .dropDown::after {
+        content: url('../../images/arrow_drop_down.png');
+        position: absolute;
+        top: -3px;
+        right: -11px;
+    }
+
+    .navLeftItemsWrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .navRightItemsWrapper {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .signupNav {
+        border: 1px solid #FFFFFF;
+        border-radius: 5px;
+        padding: 9px 33px 0;
+        margin-right: 148px;
+        margin-top: 15px;
+    }
+
+    .hero {
+        height: auto;
+        background: none;
+    }
+
+    .heroTitle {
+        font-size: 50px;
+        line-height: 61px;
+        margin-top: 65px;
+    }
+
+    .heroBlurb {
+        font-family: 'Lato', sans-serif;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 34px;
+        letter-spacing: 1px;
+        padding: 0 306px;
+        margin: 2px 0 42px;
+    }
+
+    .computerImage {
+        margin: 42px 0 20px;
+        width: 850px;
+        height: 480px;
+    }
+
+    .partners {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        height: 160px;
+    }
+
+    .chubb {
+        height: 25px;
+        width: 247px;
+        margin: 0;
+    }
+
+    .nationWide{
+        height: 63px;
+        width: 212px;
+        margin: 0;
+    }
+
+    .QBE{
+        height: 44px;
+        width: 129px;
+        margin: 0;
+    }
+
+    .assurant{
+        height: 59px;
+        width: 281px;
+        margin: 0;
+    }
+
+    .solutions {
+        display: flex;
+    }
+
+    .solutionsWrapper {
+        margin-left: 130px;
+    }
+
+    .solutionsHeading {
+        font-family: Montserrat;
+        font-size: 62px;
+        line-height: 76px;
+        letter-spacing: 1px;
+        padding: 0;
+        margin: 105px 0 0 245px;;
+        text-align: left;
+    }
+
+    .solutionTitle {
+        font-size: 24px;
+        line-height: 29px;
+    }
 }

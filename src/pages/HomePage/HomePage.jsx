@@ -6,20 +6,31 @@ import styles from '../HomePage/HomePage.module.css';
 const HomePage = () => {
   return (
     <div className={styles.HomePage}>
-        <nav className={styles.navbar}>
-            <img src={require('../../images/surelogo_blue.png')} alt="sure logo" className={styles.navLogo} />
-            <img src={require('../../images/menu.png')} alt="menu icon" className={styles.menu} />
-        </nav>
-        <section className={styles.hero}>
-            <h1 className={styles.h1} >Sure + You.</h1>
-            <p className={styles.heroBlurb} >
-                Complement your core business and <strong>increase customer lifetime value</strong> with integrated offers from top-tier insurance carriers.
-            </p>
-            <button  >
+        <div className={styles.desktopBackgroundWrapper}>
+            <nav className={styles.navbar}>
+                <img src={require('../../images/surelogo_blue.png')} alt="sure" className={`${styles.navLogoMobile} ${styles.mobileNav}`} />
+                <img src={require('../../images/menu.png')} alt="menu" className={`${styles.menu} ${styles.mobileNav}`} />
+                <div className={styles.navLeftItemsWrapper}>
+                    <img src={require('../../images/SURE logo.png')} alt="sure" className={`${styles.navLogoDesktop} ${styles.desktopNav}`}/>
+                    <p className={`${styles.navItem} ${styles.desktopNav} ${styles.dropDown}`}>Products</p>
+                    <a href="#" className={`${styles.navItem} ${styles.desktopNav}`}>Support</a>
+                    <a href="#" className={`${styles.navItem} ${styles.desktopNav}`}>Claims</a>
+                </div>
+                <div className={styles.navRightItemsWrapper}>
+                    <a href="#" className={`${styles.navItem} ${styles.desktopNav}`}>Download App</a>
+                    <a href="#" className={`${styles.navItem} ${styles.desktopNav}`}>Login</a>
+                    <a href="#" className={`${styles.navItem} ${styles.desktopNav} ${styles.signupNav}`}>Sign Up</a>
+                </div>
+            </nav>
+            <section className={styles.hero}>
+                <h1 className={styles.heroTitle} >Sure + You.</h1>
+                <p className={styles.heroBlurb} >
+                    Complement your core business and <strong>increase customer lifetime value</strong> with integrated offers from top-tier insurance carriers.
+                </p>
                 <Link to='/hacker-news' className={styles.getStartedBtn}>Get Started</Link>
-            </button>
-            <img src={require('../../images/computer-image.png')} alt="bitmap photo" className={styles.computerImage} />
-        </section>
+                <img src={require('../../images/computer-image.png')} alt="bitmap photo" className={styles.computerImage} />
+            </section>
+        </div>
         <section className={styles.partners}>
             <img src={require('../../images/chubb.png')} alt="chubb logo" className={`${styles.partnerLogo} ${styles.chubb}`} />
             <img src={require('../../images/NationwideLrgFormat.png')} alt="nationwide logo" className={`${styles.partnerLogo} ${styles.nationWide}`} />
@@ -28,26 +39,28 @@ const HomePage = () => {
         </section>
         <section className={styles.solutions}>
             <p className={styles.solutionsHeading} >Choose the solution that's right for your business.</p>
-            <div>
-                <img src={require('../../images/api.png')} alt="icon"/>
-                <h3 className={styles.solutionTitle} >API</h3>
-                <p className={styles.solutionBlurb} >
-                    The Sure API is a set of RESTful <br/> endpoints that allow you to <br/>customize the look and feel for <br/>a truly native experience.
-                </p>
-            </div>
-            <div>
-                <img src={require('../../images/iFrame.png')} alt="icon"/>
-                <h3 className={styles.solutionTitle} >iFrame</h3>
-                <p className={`${styles.solutionBlurb} ${styles.iFrame}`} >
-                    The iFrame solution allows for <br/>easy integration - simply place a <br/>line of code to embed an insurance <br/>form anywhere on your site.
-                </p>
-            </div>
-            <div>
-                <img src={require('../../images/whitelabel.png')} alt="icon"/>
-                <h3 className={styles.solutionTitle} >White Label</h3>
-                <p className={styles.solutionBlurb} >
-                    Sure will build and host a <br/>branded page, which you ca link <br/>to from a webpage or an email.
-                </p>
+            <div className={styles.solutionsWrapper} >
+                <div>
+                    <img src={require('../../images/api.png')} alt="icon"/>
+                    <h3 className={styles.solutionTitle} >API</h3>
+                    <p className={styles.solutionBlurb} >
+                        The Sure API is a set of RESTful <br/> endpoints that allow you to <br/>customize the look and feel for <br/>a truly native experience.
+                    </p>
+                </div>
+                <div>
+                    <img src={require('../../images/iFrame.png')} alt="icon"/>
+                    <h3 className={styles.solutionTitle} >iFrame</h3>
+                    <p className={`${styles.solutionBlurb} ${styles.iFrame}`} >
+                        The iFrame solution allows for <br/>easy integration - simply place a <br/>line of code to embed an insurance <br/>form anywhere on your site.
+                    </p>
+                </div>
+                <div>
+                    <img src={require('../../images/whitelabel.png')} alt="icon"/>
+                    <h3 className={styles.solutionTitle} >White Label</h3>
+                    <p className={styles.solutionBlurb} >
+                        Sure will build and host a <br/>branded page, which you ca link <br/>to from a webpage or an email.
+                    </p>
+                </div>
             </div>
         </section>
         <section className={styles.coverageOptions}>
