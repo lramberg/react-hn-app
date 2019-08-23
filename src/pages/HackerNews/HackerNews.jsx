@@ -21,11 +21,11 @@ class HackerNews extends Component {
             var response = res.data.splice(0, 100)
             return response
         })
-        .then(res => {
-            res.forEach(item => {
+        .then(response => {
+            response.forEach(item => {
                 axios.get("https://hacker-news.firebaseio.com/v0/item/" + item + ".json?print=pretty")
-                .then(res => {
-                    stories.push(res.data);
+                .then(response => {
+                    stories.push(response.data);
                     return stories
                 })
                 .catch(err => {
@@ -36,7 +36,7 @@ class HackerNews extends Component {
         .catch(err => {
             console.log(err)
         })
-        self.setState({ stories: stories })
+        self.setState({ stories: stories, isLoaded: true })
     }
 
     // getStoryIds = async () => {
