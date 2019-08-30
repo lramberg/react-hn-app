@@ -8,54 +8,65 @@ class HackerNews extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            isLoaded: false,
             stories: []
         }
     }
 
     componentDidMount() {
-        var self = this;
-        var stories = [];
+        var promises = [];
         axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
         .then(res => {
             var response = res.data.splice(0, 100)
             return response
         })
         .then(response => {
-            response.forEach(item => {
-                axios.get("https://hacker-news.firebaseio.com/v0/item/" + item + ".json?print=pretty")
-                .then(response => {
-                    stories.push(response.data);
-                    return stories
-                })
-                .catch(err => {
-                    console.log(err)
-                })
+            response.forEach( item => {
+                promises.push(axios.get("https://hacker-news.firebaseio.com/v0/item/" + item + ".json?print=pretty"))
+            });
+            return Promise.all(promises)
+        })
+        .then(results => {
+            var storyData = results.map(result => {
+                return result.data;
             })
+            this.setState({ stories: storyData});
         })
-        .catch(err => {
-            console.log(err)
-        })
-        self.setState({ stories: stories, isLoaded: true })
     }
 
-    // getStoryIds = async () => {
-    //     try {
-    //         await axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
-    //         .then(res => {
-                
+    // componentDidMount() {
+    //     var self = this;
+    //     var stories = [];
+    //     axios.get('https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty')
+    //     .then(res => {
+    //         var response = res.data.splice(0, 100)
+    //         return response
+    //     })
+    //     .then(response => {
+    //         response.forEach(item => {
+    //             axios.get("https://hacker-news.firebaseio.com/v0/item/" + item + ".json?print=pretty")
+    //             .then(response => {
+    //                 stories.push(response.data);
+    //                 return stories
+    //             })
+    //             .catch(err => {
+    //                 console.log(err)
+    //             })
     //         })
-    //     } catch (err) {
+    //     })
+    //     .catch(err => {
     //         console.log(err)
-    //     }
+    //     })
+    //     self.setState({ stories: stories, isLoaded: true })
     // }
+
 
     render() {
         console.log('state', this.state.stories)
-        console.log('loaded', this.state.isLoaded)
         var story = this.state.stories.map((story, idx) => {
             return(
-                <li key={idx}>{story}</li>
+                <li key={idx}>
+                    <a href={story.url}>{story.title}</a>
+                </li>
             )
         })
         return (
